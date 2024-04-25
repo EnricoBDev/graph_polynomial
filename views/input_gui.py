@@ -7,10 +7,10 @@ from PIL import Image, ImageTk
 import networkx as nx  # type: ignore
 import matplotlib.pyplot as plt
 
-
 from graph_parser import get_matrix  # type: ignore
 
 from views.confirm_file_gui import ConfirmFileGui  # type: ignore
+from model.chromatic_poly_alg import ChromaticPolyAlg
 
 
 class InputGui:
@@ -69,3 +69,5 @@ class InputGui:
             # after that we need to call a func/method that calculates the polynomial
             # and then we show that in another window, while this one is (destroyed ?)
             ###
+
+            poly = ChromaticPolyAlg.calculate_poly(graph)
