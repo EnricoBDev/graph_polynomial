@@ -6,14 +6,17 @@ class ConfirmFileGui(tk.Toplevel):
     def __init__(self, master, img):
         super().__init__(master=master)
 
+        self.master = master
+        self.img = img
+
         self.is_img_selected = False
 
         self.lift()
         self.focus_force()
         self.title("Chromatic polynomial")
 
-        self.preview = ImageTk.PhotoImage(img)
-        self.preview_lbl = tk.Label(self, image=self.preview)
+        # self.preview = ImageTk.PhotoImage(img)  # testing
+        self.preview_lbl = tk.Label(self, image=self.img)
         self.preview_lbl.grid(column=0, row=0, pady=(10, 0))
 
         # label and buttons layout

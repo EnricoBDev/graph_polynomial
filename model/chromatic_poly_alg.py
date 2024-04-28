@@ -22,7 +22,7 @@ class ChromaticPolyAlg:
             contracted_graph = nx.contracted_edge(
                 graph, edge, self_loops=False)
 
-            # remider for future self
+            # NOTE for future self
             # In python, when we use the assignment operator to create two copies
             # of a *mutable* object, they share the same id and the same memory space
             # so we need to do a copy of an object via the std library copy.deepcopy()
